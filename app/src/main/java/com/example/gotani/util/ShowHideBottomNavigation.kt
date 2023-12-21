@@ -1,0 +1,22 @@
+package com.example.gotani.util
+
+import androidx.fragment.app.Fragment
+import com.example.gotani.R
+import com.example.gotani.activities.ShoppingActivity
+import com.google.android.material.bottomnavigation.BottomNavigationView
+
+fun Fragment.hideBottomNavigationView(){
+    val bottomNavigationView =
+        (activity as ShoppingActivity).findViewById<BottomNavigationView>(
+            com.example.gotani.R.id.bottomNavigation
+        )
+    bottomNavigationView.visibility = android.view.View.GONE
+}
+
+fun Fragment.showBottomNavigationView(){
+    val bottomNavigationView =
+        (activity as ShoppingActivity).findViewById<BottomNavigationView>(
+            com.example.gotani.R.id.bottomNavigation
+        )
+    bottomNavigationView.visibility = android.view.View.VISIBLE
+}
